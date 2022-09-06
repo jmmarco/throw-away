@@ -5,7 +5,7 @@ import App from './App';
 // eslint-disable-next-line no-undef
 test('renders learn react link', () => {
   render(<App />);
-  const linkElement = screen.getByText(/Welcome to app!/i);
+  const text = screen.getByText(/Welcome to app!/i);
   // eslint-disable-next-line no-undef
-  expect(linkElement).toBeInTheDocument();
+  expect(text).toBeInTheDocument();
 });
