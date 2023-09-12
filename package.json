@@ -9,6 +9,7 @@
     "eslint-config-airbnb": "^19.0.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-query": "^3.39.2",
     "react-scripts": "5.0.1"
   },
   "scripts": {
@@ -16,7 +17,12 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint --ext .jsx,.js src/"
+    "eslint": "eslint --ext .jsx,.js src/",
+    "eslint:fix": "eslint --fix --ext .jsx,.js src/",
+    "prettier": "prettier --check \"./src/**/*.{js,jsx}\"",
+    "prettier:fix": "prettier --write \"./src/**/*.{js,jsx}\"",
+    "lint": "npm run eslint && npm run prettier",
+    "fix": "npm run eslint:fix && npm run prettier:fix"
   },
   "eslintConfig": {
     "extends": [
@@ -35,5 +41,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^9.0.0",
+    "prettier": "^3.0.3"
   }
 }
